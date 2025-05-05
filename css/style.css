@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+span{
+    color: white;
+}
+hr{
+    border: .5px solid white;
+}
+body{
+    /* height: 15000px; */
+    background-color: whitesmoke;
+    font-family: cursive;
+}
+#menu{
+    display: none;
+    width: 300px;
+    height: 100vh;
+    position:fixed;
+    left: 0;
+    top: 0;
+    background-color: grey;
+}
+#top{
+    width: 300px;
+    height: 100px;
+    background-color: rgb(50, 196, 145);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#js{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    top: 10px;
+    left: 30px;
+}
+#txt-doc{
+    position: relative;
+    left: 130px;
+    top: 30px;
+    font-size: 25px;
+    font-weight: lighter;
+    color: black;
+}
+.main-doc{
+    background-color:black;
+    padding-top: 50px;
+    /* margin-left: 300px; */
+}
+.doc{
+    margin: 0 auto;
+    width: 80%;
+}
+h1,h2,h3{
+    color: #abff00;
+}
+.main-txt{
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+.main-paragraph {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    text-align: justify;
+    padding: 5px;
+}
+p {
+    font-size: 1.0rem;
+    color: rgb(40, 247, 40);
+}
+#zxc{
+    padding-left: 10%;
+    margin-top: 50px;
+}
+.child-txt{
+    padding-top: 50px;
+    margin-left: 10px;
+}
+.child-par{
+    padding-top: 10px;
+    padding-left: 40px;
+    display: list-item;
+}
+.grey{
+    color: grey;
+}
+.code{
+    border-left: 2px solid paleturquoise;
+    box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
+    padding: 0 1em;
+    margin-top:30px;
+}
+.func{
+    color: #358ccb;
+    padding:5px;
+}
+.new{
+    display: block;
+}
+.text{
+    color: green;
+    padding:5px;
+}
+
+span{
+    padding: 5px;
+}
+.purple{
+    color: purple;
+}
+
+.pink{
+    color: palevioletred;
+}
+.border{
+    border-bottom: 1px solid green;
+}
+.blue{
+    color: #0495fd;
+}
+.imp{
+    border-left: 2px solid rgb(91, 210, 117);
+    box-shadow: -1px 0px 0px 0px  rgb(91, 210, 117), 0px 0px 0px 1px #dfdfdf;
+    padding: 0 1em;
+    margin-top:30px;
+}
+.imp-txt{
+    display: flex;
+    justify-content: center;
+}
+/* .btm{ 
+    padding-top: 25px;
+}*/
