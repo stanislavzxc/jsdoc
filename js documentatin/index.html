@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Документация</title>
+</head>
+<body>
+    <div id="menu">
+        <div id="top">
+            <img src="img/js.png" alt="JS" id="js">
+            <h2 id="txt-doc">Documentation</h2>
+        </div>
+    </div>
+<div class="main-doc">
+    <div class="doc">
+        <h1 class="main-txt">Введение</h1>
+        <hr>
+        <p class="main-paragraph">JavaScript – это язык программирования, который используют разработчики для создания интерактивных веб-страниц.</p>
+        <p class="main-paragraph">Именно JavaScript отвечает за действия во frontend стороне сайта</p>
+        <p class="main-paragraph">К примеру действия после нажатие кнопки обрабатывает JavaScript и с помощью него вы можете сделать какое нибудь действие для данной кнопки</p>
+        <p class="main-paragraph">Другими словами JavaScript - это язык, для взаимодействия с пользователем</p>
+        <p class="main-paragraph">Код на JavaScript можно писать в разных редакторов коды и компиляторах,лично я использую Visual Studio Code</p>
+        <p class="main-paragraph" id="zxc">В этой документации, я сделаю как можно меньше воды, больше примеров, понятным языком</p>
+        <p class="main-paragraph">После каждой теории и моего обьеснения, будут задачки, для закрепления материала,без них нет смысла! Знания всегда нужно применять на практике.</p>
+
+    </div>
+    <div class="doc">
+        <h1 class="main-txt">Начало работы</h1>
+        <hr>
+        <p class="main-paragraph">В качестве примера,  я буду использовать Vusial Studio Code</p>
+        <p class="main-paragraph">Сначало же вам нужно установить vs code и установить в нем самом, язык JavaScript</p>
+        <p class="main-paragraph">Существует много способов,но я покажу один и как по мне самый удобный и понятный, вам стоит создать новый файл с расширением ".js" , к примеру - script.js</p>
+        <p class="main-paragraph">щелкаем правой кнопкой мыши и выбираем "открыть с помощью code"</p>
+        <img src="img/print.png">
+        <p class="main-paragraph">Код  на JavaScript можно писать прямо в html файле с помощью тега "script" либо в отдельном файле использовав : тег script и в качестве атрибута указать scr и в нем название нашего файла и папку(если есть)</p>
+    </div>
+    <div class="doc">
+        <h1 class="main-txt">Oсновы</h1>
+        <hr>
+            <h2 class="child-txt">Первая программа</h2>
+            <hr>
+                <p class="main-paragraph">"Hello World" это база,от нее не куда не убежишь</p>
+                <p class="main-paragraph">Рассмотрим 2 примера для вывода:</p>
+                <p class="child-par">-Вывод на консоль</p>
+                <p class="child-par">-Вывод текста в качестве сообщения на сайте</p>
+                <p class="main-paragraph">в первом случае,для вывода на косноль используется функция " console.log(); " </p>
+                <p class="main-paragraph">Тоесть, мы обращемся к классу сonsole и вызываем его функцию log , а в качестве параметров передаем то, что нам нужно для вывода на консоль </p>
+                <p class="main-paragraph">Если вы хотите просто текст,тогда нужно использовать ковычки</p>
+                <img src="img/log.png" >
+                <p class="main-paragraph">Во втором же случае вам нужно использовать функцию "alert("text");" и текст будет выведен в качестве уведомления на сайте.</p>
+            </div>
+
+            <div class="doc">
+                <h1 class="main-txt">Переменные</h1>
+                <hr>
+                <p class="main-paragraph">Переменные являются важной частью любого языка и к тому же очень простой</p>
+                <p class="main-paragraph">Простым язвком, переменная - это контейнер,в котором программист и машина могут хранить данные</p>
+                <p class="main-paragraph">к примеру: числа, драбные числа, строки, булевые значения, символы и тд</p>
+                <p class="main-paragraph">для того, чтобы объявить переменную, используется ключевое слово let, после него идет имя переменной</p>
+                <div class="code">
+                    <code>
+                        <span class="func">let</span>
+                        <span>hello;</span>
+                    </code>
+                </div>
+                <p class="main-paragraph">Но пока что эта переменная ничего не хранит и ничего не делает</p>
+                <p class="main-paragraph">что бы присвоить ей значение, нужно прописать следующее:</p>
+                <div class="code">
+                    <code>
+                        <span class="func">let</span>
+                        <span>hello<span class="pink">=</span> <span class="purple">hi</span>;</span>
+                    </code>
+                </div>
+                <p class="main-paragraph">В итоге мы объявили переменную с названием hello и просвоили ей строчное значение hi</p>
+                <p class="main-paragraph">В одной строке можно сразу объявить много переменных</p>
+                <div class="code">
+                    <code>
+                        <span class="func">let</span>
+                        <span>hello  <span class="pink">=</span>  <span class="purple">"hi"</span>, <span class="func">let</span> five = <span class="purple">5</span>, <span class="func">let</span> boolean = <span class="purple">true</span>;</span>
+                    </code>
+                </div>
+                <p class="main-paragraph">Правда, лучше так не делать из за того, что код будет менее читабельный</p>
+                <p class="main-paragraph">Кроме let еще существует ключевое слово var, о кoтором я поговорю попoзже</p>
+                <p class="main-paragraph">Переменные можно изменять, но если программист уверен, что изменять ее не стоит, тогда поможет ключевое слово const</p>
+                <div class="code">
+                    <code>
+                        <span class="func">const</span>
+                        <span>p<span class="pink">=</span>  <span class="purple">3,14</span>;</span>
+                    </code>
+                </div>
+                <p class="main-paragraph">что бы обратиться к переменной, нужно прописать ее имя, к примеру вывод на консоль:</p>
+                <div class="code">
+                    <code>
+                        <span class="func">let</span>
+                        <span>number <span class="pink">=</span> <span class="purple">34</span>;</span>
+                        <div> <span class="func">console.log</span><span>(number);</span><span class="text">//Вывод: 34</span></div>
+                    </div>
+                    </code>
+                <h2 class="main-txt btm">Задачки</h2>
+                <hr>
+                <p class="main-paragraph">1. Объявите две переменные: par и child</p>
+                <p class="main-paragraph">2. Запишите строку "hello" в переменную par</p>
+                <p class="main-paragraph">3. Скопируйте значение из par в child</p>
+                <p class="main-paragraph">4. выведите переменную child через console.log(); а потом через alert();</p>
+            </div>
+           
+            <div class="doc"> 
+                <h1 class="main-txt">Комментарии</h1>
+                <hr>
+                    <p class="main-paragraph">Комментарии это очень удобная вещь в языках программирования, закоментировать код, это означает убрать часть кода что бы ее не проверял компилятор и не жаловался на них, а сам код не будет убираться пока вы не раскоментируете часть кода</p>
+                    <p class="main-paragraph">Еще комментарии используют для пояснения что где и для чего было сделано</p>
+                    <p class="main-paragraph">виды комментариев:</p>
+                    <p class="child-par">-Однострочные</p>
+                    <p class="child-par">-Многострочные</p>
+                <div class="code">
+                    <code>
+                        <span class="func">// let</span>
+                        <span>a <span class="pink">=</span> <span class="purple">6</span>;</span>
+                        <span class="text"> - это однострочный комментарий</span>
+                    </code>
+                    
+            <div>
+                <span class="func">/* let</span>
+                        <span>b <span class="pink">=</span> <span class="purple">6</span>;</span>
+            </div>
+            <div>
+                <span class="func">let</span>
+                <span>c <span class="pink">=</span> <span class="purple">10</span>;*/</span>
+                <span class="text"> - это многострочный комментарий</span>
+            </div>
+                        
+                   </code>
+                </div>    
+            </div> 
+        <div class="doc">
+            <h1 class="main-txt">Типы Данных</h1>
+            <hr>
+            <p class="main-paragraph">Для того, чтобы работать с переменными и не только, вам нужно знать какие бывают типы данных</p>
+            <p class="main-paragraph">JavaScript - это НЕстроготипизированный язык, тоесть среда разработки сама понимает, где и какой тип данных в отличии от java и с# к примеру </p>
+            <p class="main-paragraph">Чтобы узнать тип данных вопспользуемся функцией typeof();</p>
+            <h2 class="main-txt">Целое число</h2>
+            <hr>
+            <p class="main-paragraph">это обыкновенное число, не дробное</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span>
+                    <span>number  <span class="pink">=</span> <span class="purple">34</span>;</span>
+                    <div> <span class="func">console.log</span><span>(</span><span class="func">typeof</span><span>(number));</span> <span class="text">//int (<span class="text">Целое число</span>)</span></span></div>
+                </code>
+            </div>
+            <h2 class="main-txt">Строка</h2>
+            <hr>
+            <p class="main-paragraph">строка(sting) должно быть заключена в кавычки</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span><span><span>str</span><span class="pink">=</span> </span><span class="text">"Привет"</span>;
+                    <div><span class="func">let</span><span><span>str2</span><span class="pink">=</span>  </span> <span class="text">'Одинарные кавычки тоже подойдут'</span>;</div>
+                    <span class="func">let</span><span><span>str3</span><span class="pink">=</span> </span><span class="text">`Обратные кавычки позволяют встраивать переменные ${str}`;</span>
+                </code>
+            </div>
+            <p class="main-paragraph">Последний пример это называется интерполяция строк, это очень полезная фича, если нужно выводить много текста и чередовать их с переменными</p>
+            <h2 class="main-txt">Булевый(логичесский тип)</h2>
+            <hr>
+            <p class="main-paragraph">Булевый тип (boolean) может принимать только два значения: true (истина) и false (ложь).</p>
+            <p class="main-paragraph">Такой тип, как правило, используется для хранения значений да/нет: true значит «да, правильно», а false значит «нет, не правильно».</p>
+
+            <h2 class="main-txt">Null</h2>
+            <hr>
+            <p class="main-paragraph">Указывает на то, что объект ни на что не ссылается, тоесть просто пустышка в которой нет пользы</p>
+            
+            <h2 class="main-txt">Undefined</h2>
+            <hr>
+            <p class="main-paragraph">Указывает на то, чт значение не было присвоено</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span><span>str;</span>
+                    <div><span class="func">console.log</span><span>(str);</span><span class="text">//Undefined</span></div>
+                </code>
+            </div>
+            <h2 class="main-txt btm">Задачки</h2>
+            <hr>
+            <p class="main-paragraph">Что выведет код?</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span><span>str  <span class="pink">=</span>  </span><span class="text">"stas";</span>
+                    <div><span class="func">console.log</span><span>( <span class="text">`hello ${1}`</span> );</span><span class="text">// ??</span></div>
+                    <div><span class="func">console.log</span><span>(<span class="text">`hello ${"str"}</span>);</span><span class="text">// ??</span></div>
+                    <div><span class="func">console.log</span><span>( <span class="text">`hello ${str}` </span>);</span><span class="text">// ??</span></div>
+                </code>
+            </div>
+
+        </div>
+        <div class="doc">
+            <h1 class="main-txt">Операторы Сравнений</h1>
+            <hr>
+             <p class="main-paragraph">В JavaScript Операторы Сравнений записываются так:</p>
+             <p class="child-par">Больше/меньше: a > b, a < b.</p>
+             <p class="child-par">Больше/меньше или равно: a >= b, a <= b.</p>
+             <p class="child-par">Равно: a == b, для сравнения используется двойной знак равенства ==. Один знак равенства a = b означал бы присваивание.</p>
+             <p class="child-par">Не равно. В математике обозначается символом ≠, Ав JavaScript записывается как a != b.</p>
+             <p class="main-paragraph">Результат сравнения имеет лоигчесский тип</p>
+             <p class="child-par">True(истина, правда)</p>
+             <p class="child-par">False(ложь, не правда)</p>
+             <p class="main-paragraph">К примеру:</p>
+             <div class="code">
+                <code>
+                <span class="func">console.log</span> <span> (10 <span class="pink">></span> 5);</span> <span class="text">// True</span>
+                <div>
+                    <span class="func">console.log</span>
+                    <span>(<span class="purple">5</span> <span class="pink">></span><span class="purple">8</span>);
+                    <span class="text">//false</span>
+                </div>
+                </code>
+            </div>
+            <p class="main-paragraph">Рузультат сравнения можно присвоить переменной:</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span>
+                    <span>result</span>
+                    <span class="pink">=</span>
+                    <span class="purple">5</span>
+                    <span class="pink">></span>
+                    <span class="purple">2</span>
+                    <span>;</span>
+                    <div>
+                        <span class="func">console.log</span>
+                        <span>(result);</span>
+                        <span class="text">// true</span>
+                    </div>
+                </code>
+            </div>
+            <h2 class="main-txt">Сравнение разных типов данных</h2>
+            <hr>
+            <p class="main-paragraph">Если сравниваются разные типы данных, то JavaScript неявно приводит их к одному типу</p>
+            <div class="code">
+                <code>
+                    <span class="func">console.log</span>
+                    <span>(<span class="text">"2"</span> <span class="pink">==</span> <span class="purple">2</span>; )</span>
+                    <span class="text">//true, Строка "2" была неявно преобразованна в число 2</span>
+                </code>
+            </div>
+            <p class="main-paragraph">А что такое Явное и Неявное преобразование мы скоро с вами разберем</p>
+            <p class="main-paragraph"></p>
+            <h2 class="main-txt">Строгое Сравнение</h2>
+            <hr>
+            <p class="main-paragraph">Для строгого сравнения нам нуно использовать оператор "==="</p>
+            <p class="main-paragraph">Оператор строгого равенства === проверяет равенство без приведения типов.</p>
+            <div class="code">
+                <code>
+                    <span class="func">console.log</span>
+                    <span>(0 <span class="pink">==</span> false)</span>
+                    <span class="text">//True</span>
+                </code>
+            </div>
+            <p class="main-paragraph">True, Потому что среда разработки преобразовало число 0 в булевое значение false </p>
+            <p class="child-par">true == 1</p>
+            <p class="child-par">false == 0</p>
+            <div class="code">
+                <code>
+                    <span class="func">console.log</span>
+                    <span>(0 <span class="pink">===</span> false);</span>
+                    <span class="text">//false</span>
+                </code>
+            </div>
+            <p class="main-paragraph">А здесь же среда разработки проверила значения без приведения одних типов данных</p>
+            <h2 class="main-txt">Сравнение Строк</h2>
+            <hr>
+            <p class="main-paragraph">при сравнении строк в JavaScript используется алфавитный способ и кличество символов</p>
+            <div class="code">
+                <code>
+                    <span class="func">console.log</span>
+                    <span>(<span class="text">"Я"</span> <span class="pink">></span> <span class="text">"А"</span>);</span>
+                    <span class="text">//True</span>
+                    <div> <span class="func">console.log</span>
+                    <span>( <span class="text">"Спящий"</span> <span class="pink">></span> <span class="text">"Сны"</span>);</span>
+                    <span class="text">// true</span>
+                    </div>
+                </code>
+            </div>
+
+
+            <h2 class="main-txt">Задачки</h2>
+            <hr>
+            <p class="main-paragraph">Что будет результатом сравнений?</p>
+            <div class="code">
+                <code>
+                    <span class="purple">10</span>
+                    <span class="pink">></span>
+                    <span class="purple">10</span>
+                    <div><span class="text">"ананас"</span> <span class="pink"> < </span> <span class="text">"яблоко"</span></div>
+                    <div><span class="text">"14"</span> <span class="pink">></span>  
+                    <span class="text">"34"</span>
+                    </div>  
+                </code>
+            </div>
+        </div>
+        <div class="doc">
+            <h1 class="main-txt">Базовые Операторы</h1>
+            <hr>
+            <p class="main-paragraph">  В JavaScript поддерживаются следующие математические операторы:</p>
+            <p class="child-par">Сложение +,</p>
+            <p class="child-par">Вычитание -,</p>
+            <p class="child-par">Умножение *,</p>
+            <p class="child-par">Деление /,</p>
+            <p class="child-par">Взятие остатка от деления %,</p>
+            <p class="child-par">Возведение в степень **.</p>
+            <p class="main-paragraph">также можно складывать строки:</p>
+            <div class="code">
+                <code>
+                   <span class="func">let</span>
+                   <span>str</span>
+                   <span class="pink">=</span>
+                   <span class="text">"my"</span> 
+                   <span class="pink">+</span>
+                   <span class="text">"String";</span>
+                   <div>
+                    <span class="func">console.log</span>
+                    <span>( <span>str</span> );</span>
+                    <span class="text">// myString</span>
+                </div>
+                </code>
+            </div>
+        </div>
+        <div class="doc">
+            <h1 class="main-txt">Преобразование Типов Данных</h1>
+            <hr>
+            <p class="main-paragraph">Существует 2 вида преобразования:</p>
+            <p class="child-par">Явное</p>
+            <p class="child-par">Неявное</p>
+            <p class="main-paragraph">Явное преобразование - это когда пребразование делает сам программист </p>
+            <p class="main-paragraph">а вот Неявное пребразование делает среда разработки автоматичесски если не будет потерь данных</p>
+            <p class="main-paragraph">В явном преобразовании вы говорите машине, что я беру все на свой страх и риск, если будет потеря данных</p>
+            <p class="main-paragraph">Вот пример явного преобразования</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span>
+                    <span> value</span>
+                    <span class="pink"> = </span>
+                    <span class="purple">35;</span>
+                    <div>
+                        <span class="func">console.log</span>
+                        <span>(   <span class="func">typeof</span> <span>(value)</span> );</span>
+                        <span class="text">// int Целое Число</span>
+                    </div>
+                    <div>
+                        <span>value</span>
+                        <span class="pink">=</span>
+                        <span class="func">String</span>
+                        <span>(value);</span>
+                        <div>
+                            <span class="func">console.log</span>
+                            <span>(   <span class="func">typeof</span> <span>(value)</span> );</span>
+                            <span class="text">//  sting, Строка</span>
+                        </div>
+                    </div>
+                </code>
+            </div>
+            <p class="main-paragraph">Тоесть, для явного преобразования нам нужно перед переменной указать тип данных в который мы хотим преобрзовать</p>
+            <p class="main-paragraph"></p>
+        </div>
+       
+        <div class="doc">
+            <h1 class="main-txt">Цыклы</h1>
+            <hr>
+            <h2 class="main-txt">if-else</h2>
+            <hr>
+            <p class="main-paragraph">Конструкция if-else проверяет условие, которое вы ставите ей и если это условие верно выполняется тело конструкции, иначе не выполняет его</p>
+            <div class="code">
+                <code>
+                    <span class="pink">if</span>
+                    <span>( 
+                        <span>name</span>
+                        <span class="pink">==</span>
+                        <span class="text">"sasha"</span>
+                        )</span>
+                        <span>{</span>
+                        <div>
+                            <span class="func">console.log</span>
+                            <span>( <span class="text">"Привет,саша"</span> );</span>
+                        </div>
+                        <div>}</div>
+                        <div>
+                            <span class="pink">else</span>
+                            <span> {</span>
+                                <div>
+                                    <span class="func">console.log</span>
+                                    <span>( <span class="text">"Привет, НЕ Саша"</span> );</span>
+                                <div><span>}</span></div>
+                                </div>
+                        </div>
+                </code>
+            </div>
+            <p class="main-paragraph">В груглых скобках нужно прописывать условие, а в фигурных скобках {то, что будет выполнено если условие == true}</p>
+            <p class="main-paragraph">Если 'if' имеет только одну строчку кода, тогда можно не использовать фигурные скобки {}</p>
+            <div class="code">
+                <code>
+                    <span class="pink">if</span>
+                    <span>( 
+                        <span>name</span>
+                        <span class="pink">==</span>
+                        <span class="text">"sasha" </span>
+                        )</span>
+                            <span class="func"> console.log</span>
+                            <span>( <span class="text">"Привет,саша"</span> );</span>
+                </code>
+            </div>
+            <h2 class="main-txt">Несколько условий, else if</h2>
+            <hr>
+            <p class="main-paragraph">Если вам нужно поставить несколько условий, тогда можете использовать 'else if'</p>
+            <div class="code">
+                <code>
+                    <span class="pink">if</span>
+                    <span>( 
+                        <span>name</span>
+                        <span class="pink">==</span>
+                        <span class="text">"sasha"</span>
+                        )</span>
+                        <span>{</span>
+                        <div>
+                            <span class="func">console.log</span>
+                            <span>( <span class="text">"Привет,саша"</span> );</span>
+                        </div>
+                        <div>}</div>
+                        <div>
+                            <span class="pink">else if</span>
+                        <span>( 
+                            <span>name</span>
+                            <span class="pink">==</span>
+                            <span class="text">"alex"</span>
+                            )</span>
+                            <span>{</span>
+                        </div>
+                            <div>
+                                <span class="func">console.log</span>
+                                <span>( <span class="text">"Привет, Алекс"</span> );</span>
+                            </div>
+                            <div>}</div>
+                            
+                            <div>
+                                <span class="pink">else if</span>
+                            <span>( 
+                                <span>name</span>
+                                <span class="pink">==</span>
+                                <span class="text">"maks"</span>
+                                )</span>
+                                <span>{</span>
+                            </div>
+                                <div>
+                                    <span class="func">console.log</span>
+                                    <span>( <span class="text">"Привет, Макс"</span> );</span>
+                                </div>
+                                <div>}</div>
+                                <div>
+                                    <span class="pink">else</span>
+                                    <span> {</span>
+                                        <div>
+                                            <span class="func">console.log</span>
+                                            <span>( <span class="text">"Привет, НЕ Саша"</span> );</span>
+                                        <div><span>}</span></div>
+                                        </div>
+                                </div>
+                </code>
+            </div>
+            <h2 class="main-txt">Блок else</h2>
+            <hr>
+            <p class="main-paragraph">Если условие не выполнилось, тогда будет выполняться условие в теле "else"</p>
+            <p class="main-paragraph">Ключевое слово 'else' не обязательно после 'if' </p>
+            <h2 class="main-txt">Условный оператор '?'</h2>
+            <hr>
+            <p class="main-paragraph">Если вам нужно определить перменную взависимости от условия, тогда лучше использовать слудующий пример:</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span><span>accessAllowed</span> <span class="pink">=</span> <span>(yourAge > <span class="purple">25</span>)</span> <span class="pink">?</span> <span class="purple">true</span> <span class="pink">:</span>  <span class="purple">false</span><span>;</span>
+                </code>
+            </div>
+            <p class="main-paragraph">Этот способ очень хорош своей короткостью, сейчас я вам объясню, что там и для чего:</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span><span>result</span> <span class="pink">=</span> <span>(<span class="text">условие</span>) </span><span class="pink">?</span> <span class="purple">1 значение</span> <span class="pink">:</span>  <span class="purple">2 Условие иначе</span><span>;</span>
+                </code>
+            </div>
+            <p class="main-paragraph">Тоесть, если условие не выполниться, тогда будет 2 значение, а если выполниться, то будет первое значение</p>
+            <h2 class="main-txt">Задачки</h2>
+            <hr>
+            <p class="child-par">1. Создайте 2 перменные типа int. Выведите меньшее из них.</p>
+            <p class="child-par">Создайте 2 переменный 'age' и 'name' тоесть, имя и возвраст. Если возраст пользователя больше 18, то вывести строку "Добрый вечер, name! Вы совершеннолетний, поздравляем!", иначе вывести строку "Привет, name! Приносим извинения, но вы не можете гулять после 22:00".</p>
+            <h1 class="main-txt">Цыклы while, for и do while</h1>
+            <hr>
+            <h2 class="main-txt">Цыкл 'while'</h2>
+            <hr>
+            <p class="main-paragraph">Данный Цыкл имеет вот такой синтаксис:</p>
+            <div class="code">
+                <code>
+                    <span class="pink">while</span>
+                    <span>( <span class="text">Условие</span> )</span>{
+                       <div> <span class="grey">// тело цыкла(то, что будет выполняться если условие == true)</span> </div> 
+                        <div> <span>}</span></div>
+                </code>
+            </div>
+            <p class="main-paragraph">Код из тела цыкла будет выполнен,если условие будет истинно (true)</p>
+            <p class="main-paragraph">Вы должны понимать что 'while' переводиться как 'пока'</p>
+            <p class="main-paragraph">К примеру - если переменная равно 5, тогда выполниться тело цыкла</p>
+            <p class="main-paragraph">Вот пример:</p>
+            <div class="code">
+                <code>
+                    <span class="pink">while</span>
+                    <span>( <span>i <span class="pink">></span></span> <span class="purple">10</span> )</span>{
+                       <div> <span class="func">console.log</span> <span>( <span class="text">"Привет"</span> );</span> </div>
+                        <div class="pink">i++;</div>
+                        <span class="grey">// это означает что переменная будет увеличена на 1 за каждый заход в тело цыкла</span>
+                        <div> <span class="grey">// это нужно чтобы цыкл не был бесконечным</span> </div>
+                        <div> <span>}</span></div>
+                </code>
+            </div>
+            <p class="main-paragraph">В результате, программа выведет на консоль 10 раз "Привет"</p>
+            <p class="main-paragraph">Также, как и if else и тд, его можно записать в одной строке если тело состоит из 1 строчки</p>
+            <div class="code">
+                <code>
+                    <span class="pink">while</span>
+                    <span>( <span>i <span class="pink">==</span></span> <span class="purple">1</span> )</span>
+                       <span class="func">console.log</span> <span>( <span class="text">"Привет"</span> <span>);</span></span>
+                       
+                </code>
+            </div>
+            <h2 class="main-txt">Цыкл 'do while'</h2>
+            <hr>
+            <p class="main-paragraph">Вот пример этого цыкла:</p>
+            <div class="code">
+                <code>
+                    <span class="pink">do</span>
+                    <span>{</span>
+                    <div>
+                        <span class="func">console.log</span>
+                        <span>( <span class="text">"Привет"</span> );</span>
+                    </div>
+                    <div class="pink">i++;</div>
+                    <div><span>}</span></div>
+                <span class="pink">while</span>
+                <span>( <span>i <span class="pink">></span></span> <span class="purple">10</span> <span>);</span></span>
+            </code>
+            </div>
+            <p class="main-paragraph">Смысл ключевого слова 'do' в том, что оно гарантирует <ins>хотя бы одну работу цыкла</ins>, а уже потом проверяет условие</p>
+            <h2 class="main-txt">Цыкл for</h2>
+            <hr>
+            <p class="main-paragraph">Это тот же самый while, только в нем самом можно обявить переменную для подсчета</p>
+            <p class="main-paragraph">В некоторых случаях лучше использовать цыкл for, а в других - while</p>
+            <p class="main-paragraph"><ins>Вот синтаксис:</ins></p>
+            <div class="code">
+                <code>
+                    <span class="pink">for</span><span> (<span class="text"> объявление переменной; </span> <span class="text"> условие; </span>  <span class="text"> шаг;</span> )</span> {
+                      <div> <span class="grey">// ... тело цикла </span></div>
+                     <div><span>}</span></div> 
+                </code>
+            </div>
+            <p class="main-paragraph">Если переменная уже объявлена, можно пропустить 1 пункт</p>
+            <p class="main-paragraph"><ins>Пример цыкла for:</ins></p>
+            <div class="code">
+                <code>
+                    <span class="pink">for</span><span> (<span class="func">let</span> <span>i</span><span class="purple"> = </span><span class="pink">0</span><span>;</span><span>i</span><span class="purple"><</span>3;<span></span><span>i</span>
+                     <span class="pink"> i++;</span> )</span> {
+                      <div> <span class="func">console.log</span>
+                        <span>( i );</span>
+                    </div>
+                     <div><span>}</span></div> 
+                     <div class="grey">// выведет: 0, 1, 2</div>
+                </code>
+            </div>
+                <h2 class="main-txt">Прерывание цыкла, ключевое слово 'break'</h2>
+                <p class="main-paragraph">Ключевое слово 'break' делает выход из цыкла</p>
+                <p class="main-paragraph"><ins>Вот пример:</ins></p>
+                <div class="code">
+                    <code>
+                        <span class="pink">for</span><span> (<span class="func">let</span> <span>i</span><span class="purple"> = </span><span class="pink">0</span><span>;</span><span>i</span><span class="purple"><</span>3;<span></span><span>i</span>
+                     <span class="pink"> i++;</span> )</span> {
+                          <div> <span class="func">console.log</span>
+                            <span>( i );</span>
+                        </div>
+                        <div>
+                            <span class="pink">if</span>
+                            <span>( i <span class="pink">==</span> 1)</span>
+                            <span class="pink">break;</span>
+                        </div>
+                         <div><span>}</span></div> 
+                         <div class="grey">// выведет: 0, 1</div>
+                    </code>
+            </div>
+            <p class="main-paragraph">Если переменная i будет равна еденице, тогда мы выходим из цыкла</p>
+            <p class="main-paragraph">break можно применить в любом цыкле</p>
+            <h2 class="main-txt">Ключевое слово continue</h2>
+            <hr>
+            <p class="main-paragraph">Ключевое слово continue делет переход к следующему шагу, итерации</p>
+            <p class="main-paragraph">При её выполнении цикл не прерывается, а переходит к следующей итерации (если условие все ещё равно true).</p>
+            <div class="code">
+                <code>
+                    <span class="pink">for</span><span> (<span class="func">let</span> <span>i</span><span class="purple"> = </span><span class="pink">0</span><span>;</span><span>i</span><span class="purple"><</span>3;<span></span><span>i</span>
+                    <span class="pink"> i++;</span> )</span> {
+                      <div> <span class="func">console.log</span>
+                        <span>( i );</span>
+                    </div>
+                    <div>
+                        <span class="pink">if</span>
+                        <span>( i <span class="pink">==</span> 1)</span>
+                        <span class="pink">continue;</span>
+                    </div>
+                     <div><span>}</span></div> 
+                     <div class="grey">// выведет: 0, 2</div>
+                </code>
+            </div>
+                <p class="main-paragraph">break и continue нельзя применить с оператором '?'</p>
+                <h2 class="main-txt">Итого</h2>
+                <hr>
+                <p class="main-paragraph">Разобрали 3 вида циклов:</p>
+                <p class="child-par">if else</p>
+                <p class="child-par">while</p>
+                <p class="child-par">for</p>
+            <h2 class="main-txt">Задачки</h2>
+            <hr>
+            <p class="main-paragraph">1.Выведете вычитания 1000 и 7 пока результат будет больше нуля</p>
+            <p class="main-paragraph">2. Напишите программу, в которую пользователь вводит два числа и выводит результат их умножения. При этом программа должны запрашивать у пользователя ввод чисел, пока оба вводимых числа не окажутся в диапазоне от 0 до 10. Если введенные числа окажутся больше 10 или меньше 0, то программа должна вывести пользователю о том, что введенные числа недопустимы, и повторно запросить у пользователя ввод двух чисел. Если введенные числа принадлежат диапазону от 0 до 10, то программа выводит результат умножения.</p>
+            <p class="main-paragraph">3. За каждый месяц банк начисляет к сумме вклада 7% от суммы. Напишите консольную программу, в которую пользователь вводит сумму вклада и количество месяцев. А банк вычисляет конечную сумму вклада с учетом начисления процентов за каждый месяц.</p>
+        </div>
+        <div class="doc">
+            <h1 class="main-txt">Оператор Switch</h1>
+            <hr>
+            <p class="main-paragraph">Эта Конструкция тоже самое, что и 'if' только бывает лучше в случаях, где нужно ставить условия при определенном значении переменной, которую вы закунули для проверки</p>
+            <p class="main-paragraph"><ins>Вот синтаксис:</ins></p>
+            <div class="code">
+                <code>
+                   <span> <span class="pink">switch</span>( <span>переменная</span> ) { </span>
+                        <div> <span><span class="pink"> case</span> <span class="text">значение переменной <span>:</span></span> <span class="grey"> </span>// if (x === 'value1')</span></div>
+                        <div class="text">  //Тело</div>
+                         <div><span class="pink">break;</span></div>
+                      
+                         <div> <span> <span class="pink"> case</span> <span class="text">Следующие значение переменной <span>:</span></span> <span class="grey"></span> // if (x === 'value2')</span></div>
+                         <div class="text">  Тело</div>
+                          <div><span><span class="pink">  break;</span></span></div>
+                      
+                       <div><span class="pink"> default:</span></div>
+                       <div class="grey">  // Если у переменной нет таких значение, тогда вы попадаете в это тело</div>
+                       <div class="text">  Тело</div>
+                        
+                     <div><span>}</span></div> 
+                </code>
+            </div>
+            <div class="code">
+                <code>
+                    <span class="pink">switch</span><span>(<span>x</span>){ </span>
+                        <div> <span class="pink"> case</span> <span class="purple">2:</span></div>
+                        <div> <span class="func">console.log</span> <span> ('<span class="text">x=2</span>'); </span></div>
+                        
+                         <div><span class="pink">break;</span></div>
+                      
+                         <div> <span class="pink"> case</span> <span class="purple">10:</span> </div>
+                         <div> <span class="func">console.log</span>  <span> ( '<span class="text">x=10</span>'); </span></div>
+                       
+                          <div><span class="pink">break;</span></div>
+                      
+                       <div><span class="pink"> default:</span></div>
+                       <div> <span class="func">console.log</span><span> ( '<span class="text"> Я не знаю значение</span>');</span></div> 
+                     <div><span>}</span></div> 
+                </code>
+            </div>
+            <p class="main-paragraph">switch case стоит использовать когда нужно сравнивать перменную с разными значения, чтобы не мучиться, прописываю это все через if else будет трудно</p>
+            <h2 class="main-txt">Ключевое Слово default</h2>
+            <hr>
+            <p class="main-paragraph">Это тоже самое что и 'else' в конструкции 'if else' только используется оно в 'switch case'</p>
+            <h2 class="main-txt">Задачки</h2>
+            <hr>
+            <p class="child-par"> Составить расписание на неделю. Пользователь вводит порядковый номер дня недели и у него на экране отображается, то, что запланировано на этот день.</p>
+        </div>
+        <div class="doc">
+            <h1 class="main-txt">Массивы</h1>
+            <hr>
+            <p class="main-paragraph">Массив данных тоже очень важная, удобная и полезная вещь</p>
+            <p class="main-paragraph">Массив это упорядочный "контейнер" данных, тоесть каждый элемент имеет свой индекс по которому его можно получить и начинется он с нуля</p>
+            <p class="main-paragraph">По другому массив можно представить как многоквартирный жилой дом, где есть много квартир, имеющие свой номер(индекс) и находятся они все в одном доме</p>
+            <p class="main-paragraph">Для чего исползуется массив сейчас я вам обьясню</p>
+            <p class="main-paragraph"><ins> а пока что вот синтаксис:</ins></p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span>
+                    <span>myArray</span>
+                    <span class="pink">= new</span>
+                    <span class="func">myArray;</span>
+                </code>
+            </div>
+            <p class="main-paragraph">Но можно и использовать другой вариант:</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span>
+                    <span>myArray</span>
+                    <span class="pink">=</span>
+                    <span>[];</span>
+                </code>
+            </div>
+            <p class="main-paragraph">Разница лишь в том, что в первом случае мы уделяем место в оперативной памяти</p>
+            <p class="main-paragraph">Индексы массива начинаются с 0</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span>
+                    <span>cars</span>
+                    <span class="pink">=</span>
+                    <span>[ 
+                        <span class="text">"toyota"</span> 
+                        <span>,</span>
+                        <span class="text">"BMW"</span> 
+                    ];
+                </span>
+                <div>
+                    <span class="func">alert</span>
+                    <span>[0];</span>
+                    <span class="grey">// toyota</span>
+                </div>
+                <div>
+                    <span class="func">alert</span>
+                    <span>[1];</span>
+                    <span class="grey">// BMW </span>
+                </div>
+                </code>
+            </div>
+            <p class="main-paragraph">Также мы можем и заменить элемент в массиве, просто указав имя массива и индекс</p>
+            <p class="main-paragraph">У массива есть встроенные функции, к примеру функция lenght - подсчитывает длину массива:</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span>
+                    <span>cars</span>
+                    <span class="pink">=</span>
+                    <span>[ 
+                        <span class="text">"toyota"</span> 
+                        <span>,</span>
+                        <span class="text">"BMW"</span> 
+                    ];
+                </span>
+                <div>
+                    <span class="func">alert</span>
+                    <span>(cars.lenght);</span>
+                    <span class="grey">// 2</span>
+                </div>
+                </code>
+            </div>
+            <p class="main-paragraph">Массив может содержать разные тимы данных, Потому что JavaScript - не строготипизированный язык</p>
+            <h2 class="main-txt">функция push();</h2>
+            <hr>
+            <p class="main-paragraph">функция push(); Добавляет элемент в конец массива</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span>
+                    <span>cars</span>
+                    <span class="pink">=</span>
+                    <span>[ 
+                        <span class="text">"toyota"</span> 
+                        <span>,</span>
+                        <span class="text">"BMW"</span> 
+                    ];
+                </span>
+                <div>
+                    cars.<span class="func">push( "audi" );</span>
+                </div>
+                <div>
+                    <span class="func">alert</span>
+                    <span>(cars);</span>
+                    <span class="grey">// BMW, toyota, audi</span>
+                </div>
+                </code>
+            </div>
+            <h2 class="main-txt">функция pop();</h2>
+            <hr>
+            <hr>
+            <p class="main-paragraph">функция pop(); удаляет последний элемент:</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span>
+                    <span>cars</span>
+                    <span class="pink">=</span>
+                    <span>[ 
+                        <span class="text">"toyota"</span> 
+                        <span>,</span>
+                        <span class="text">"BMW"</span> 
+                    ];
+                </span>
+                <div>
+                    cars.<span class="func">push();</span>
+                </div>
+                <div>
+                    <span class="func">alert</span>
+                    <span>(cars);</span>
+                    <span class="grey">// toyota</span>
+                </div>
+                </code>
+            </div>
+            <h2 class="main-txt">функция shift();</h2>
+            <hr>
+            <p class="main-paragraph">функция shift(); удаляет первый элемент массива:</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span>
+                    <span>cars</span>
+                    <span class="pink">=</span>
+                    <span>[ 
+                        <span class="text">"toyota"</span> 
+                        <span>,</span>
+                        <span class="text">"BMW"</span> 
+                    ];
+                </span>
+                <div>
+                    cars.<span class="func">shift();</span>
+                </div>
+                <div>
+                    <span class="func">alert</span>
+                    <span>(cars);</span>
+                    <span class="grey">// BMW</span>
+                </div>
+                </code>
+            </div>
+            <h2 class="main-txt">функция unshift();</h2>
+            <hr>
+            <p class="main-paragraph">функция unshift(); добавляем первый элемент в массив:</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span>
+                    <span>cars</span>
+                    <span class="pink">=</span>
+                    <span>[ 
+                        <span class="text">"toyota"</span> 
+                        <span>,</span>
+                        <span class="text">"BMW"</span> 
+                    ];
+                </span>
+                <div>
+                    cars.<span class="func">unshift("audi");</span>
+                </div>
+                <div>
+                    <span class="func">alert</span>
+                    <span>(cars);</span>
+                    <span class="grey">// audi, toyota , BMW</span>
+                </div>
+                </code>
+            </div>
+            <p class="main-paragraph">функции push и unshift могут добавить сразу несколько элементов</p>
+            <p class="main-paragraph">Вывод массива можно сделать через <span class="func">console.log и alert</span> а можно и через перебор элементов циклом:</p>
+            <div class="code">
+                <code>
+                    <span class="pink">for</span>
+                    <span>( 
+                        <span class="func">let</span>
+                        <span>i</span>
+                        <span class="pink">= 0; <</span>
+                        <span >myArray. <span class="func">lenght;</span></span>
+                        <span>i++</span>
+                        ){</span>
+                            <div>
+                                <span class="func">console.log</span>
+                                <span>(myArray[i]);</span>
+                                <div>}</div>
+                            </div>
+                </code>
+            </div>
+        </div>
+        <div class="doc">
+            <h1 class="main-txt">Функции</h1>
+            <hr>
+            <p class="main-paragraph">Функции - это очень важная часть языка, для чего она тогда создана и зачем нужна?</p>
+            <p class="main-paragraph">Функции, или по другому - методы, были изобретены для облегчения работы программиста, и тем самым сокатить код, сейчас мы разберем все на примерах и будет практика</p>
+            <p class="main-paragraph">Кстати console.log это тоже функция, у класса console мы вызываем функцию log</p>
+            <p class="main-paragraph">Для обьявления функции в JavaScript нужно использовать клчевое слово "function"</p>
+            <p class="main-paragraph"><ins>Вот синтаксис функции</ins></p>
+            <div class="code">
+                <code>
+                    <span class="func">function</span>
+                    <span>Name <span class="grey">// имя функции</span></span>
+                    <span>( <span class="grey">// праметры</span> ){</span>
+                    <div> <span class="grey">// тело функции</span> </div>
+                    <div>}</div>
+                </code>
+            </div>
+            <p class="main-paragraph">Сначало мы пишем function потом имя функции по которому мы будем обращаться к ней, потом в круглых скобках можно указать параметры (если их нет, тогда не пишем)</p>
+            <p class="main-paragraph">Слудющая функция будет с 2 параметрами и будет складывать 2 числа </p>
+            <div class="code">
+                <code>
+                    <span class="func">function</span>
+                    <span>Summ</span>
+                    <span>( <span>a, b</span>){</span>
+                    <div> <span class="pink">return</span>a + b; </div>
+                    <div>}</div>
+                    <div> <span class="func">console.log</span>
+                        <span>( <span class="func">Summ(1,3)</span> )</span>
+                    </div> 
+                    <div> <span class="grey">// выведет 4</span> </div> 
+                </code>
+            </div>
+            <p class="main-paragraph">Параметры функции - это переменные которые вы будете использовать в ходе работе функции</p>
+            <p class="main-paragraph">значение параметрам можно присвоить когда вы вызываете функцию</p>
+            <h2 class="main-txt">Ключевое слово 'return'</h2>
+            <hr>
+            <p class="main-paragraph">Ключевое слово 'return' это результат работы функции, в предыдущем примере есть return и это означает что результат работы функции будет a + b.</p>
+            <p class="main-paragraph">Можно использовать return без какого либо значения, в таком случае будет выход мз функции</p>
+            <h2 class="main-txt">Вызов функции</h2>
+            <hr>
+            <p class="main-paragraph">Вызов функции ознчает что функция будет работать</p>
+            <p class="main-paragraph">Вот пример вызов функции</p>
+            <div class="code">
+                <code>
+                    <span class="func">Name</span>(parametres);
+                </code>
+            </div>
+            <p class="main-paragraph">Сначало идет имя, потом параметры в круглых скобках(если они есть)</p>
+            <h2 class="main-txt">Замыкание Функции</h2>
+            <hr>
+            <p class="main-paragraph">Когда функция заканчивает действия, из нее удаляются все переменные из за сборщика мусора. Но можно сделать так, что бы функция помнила эти переменные.</p>
+            <p class="main-paragraph">Это может быть полезно, когда вам нужно создать функцию, которая использует определенные данные, но вы не хотите передавать эти данные в качестве параметров при каждом вызове функции.</p>
+            <p class="main-paragraph">Например, вы можете использовать замыкание, чтобы создать функцию, которая сохраняет доступ к определенному списку элементов или к каким-то общим настройкам, чтобы обрабатывать их при вызове функции.</p>
+            <p class="main-paragraph">Для этого внутри функции нам нужно сделать еще одну функкцию и потом ее вернуть через <span class="pink">return</span></p>
+            <p class="main-paragraph">Вот пример:</p>
+            <div class="code">
+                <code>
+                   <span class="func">function</span> first() {
+                      <div>
+                         <span class="func">let</span> count <span class="purple">=</span>0;
+                      </div>  
+                      
+                     <div>
+                        <span class="func">function</span> second() {
+                     </div>   
+                       <div>
+                        <span>count</span><span class="pink">++</span>;
+                        </div>   
+                        <span class="func">console.log</span>(count);
+                     <div>}</div>
+                      
+                      <div>
+                        <span class="pink">return</span>double;
+                      </div>  
+                     <div>}</div>
+                        <div><span class="text">Создаем экземпляр замыкания что бы он ссылался на <span class="func">second</span> функкцию</div>                    
+                     <div>
+                       <span class="func">let</span> counter <span class="purple">=</span>first;   
+                     </div>
+                      <div><span class="text">и вызываем его</span></div>
+                    <div>
+                        counter(); <span class="text"> // Вывод: 1</span>
+                    </div> 
+                    <div>
+                        counter(); <span class="text"> // Вывод: 2</span>
+                    </div> 
+                    <div>
+                        counter(); <span class="text"> // Вывод: 3</span>
+                    </div> 
+                </code>
+            </div>
+            <h2 class="main-txt">Задачки</h2>
+            <hr>
+            <p class="child-par">Написать функцию, в которой 10 раз выводится на консоль сумма двух переменных которые пользователь вводит с консоли</p>
+        </div>
+</div>
+    <div class="main-doc">
+        <div class="doc">
+            <h1 class="main-txt">Работа с html и css</h1>
+            <hr>
+            <h2 class="main-txt">Обработчик событий</h2>
+            <hr>
+            <p class="main-paragraph">После усвоения основ JavaScript можно приступать к самому интересному и важному: Работа с сайтом(html, css)</p>
+            <p class="main-paragraph">Сейчас мы рассмотрим функцию которая называется 'onclick'</p>
+            <p class="main-paragraph">Событие onclick. Событие click происходит, когда пользователь нажимает на элемент на веб-странице.</p>
+             <p class="main-paragraph">Сейчас я приведу пример действия при нажатия на кнопку</p>
+             <div class="code">
+                <code>
+                    < <span class = "func">button</span> <span class = "func">onclick</span>=" <span class="func">alert</span>(' <span class="text"> Вы нажали кнопку!'</span>); ">
+                </code>
+             </div>
+             <p class="main-paragraph">В результате если вы нажмете на кнопку, выполниться функция <span class="func">alert</span> и в качестве сообщения выведится текст</p>
+            <p class="main-paragraph">onclick можно прописать и html коде, прямо в атрибутах, Но лучше и логичнее будет прописывать код в отдельном .js  файле либо в тэге 'script' </p>
+            <p class="main-paragraph">Вот пример подсчета нажития кнопки:</p>
+            <div class="code">
+                <code>
+
+                    <span class="grey">html код:</span>
+
+                    <div> < <span class = "func">button</span> <span class = "func">onclick</span>=" <span class="func">funcCounter</span>(); "> </div>
+
+                   <div> <span class="grey">JavaScript код:</span> </div>
+
+                   <div> <span class="grey"> // Объявляем глобальную переменную для подсчета: </span> </div>
+                   <div> 
+                    <span class="func">let</span>
+                    <span> count</span>
+                    <span class="pink">=</span>
+                    <span class="purple">0</span>;
+                </div>
+
+                   <div> <span class="grey">// Объявляем функцию</span> </div>
+
+                <div> <span class="func">function</span>
+                <span>funcCounter(){</span>
+                </div>
+                <div>count++;</div>
+                <div> <span class="func">alert</span>(count);</div>
+                <div><span>}</span></div>
+                </code>
+        </div>
+        <p class="main-paragraph">в результате будет подсчет количества нажатия кнопки в переменной count и она будет выведена в alert</p>
+        <p class="main-paragraph">Про глобальные и локальные переменные, и ключевое слово <span class="func">var</span> я вам потом расскажу</p>
+        <h2 class="main-txt">Задачки</h2>
+        <hr>
+        <p class="child-par">При 1 нажатии на кнопку должно быть выведено 'Привет' при 2 нажати 'вы нажали на меня 2 раза' и так далее до 10, после 10  сайт выведет 'я устал, пока'</p>
+    </div>
+    <div class="doc">
+        <h1 class="main-txt">Получение элемента по селектору</h1>
+        <hr>
+        <p class="main-paragraph">Мы можем получть html-элемент его селектору и присвоить его к переменной:</p>
+        <p class="child-par">По его id:</p>
+        <div class="code">
+            <code>
+                <span class="func">let</span>
+                <span>a</span>
+                <span class="pink">=</span>
+                <span class="pink">document.</span>
+                <span class="func">getElementById( <span class="text">''</span> )</span>
+            </code>
+        </div>
+        <p class="child-par">По его классу:</p>
+        <div class="code">
+            <code>
+                <span class="func">let</span>
+                <span>a</span>
+                <span class="pink">=</span>
+                <span class="pink">document.</span>
+                <span class="func">getElementByClass( <span class="text">''</span> )</span>
+            </code>
+        </div>
+        <p class="main-paragraph">В скобках мы должны указать id либо class элемента, который нам нужен</p>
+        <p class="main-paragraph">На русском это будет так: Получить элемент по его идентификатору либо классу</p>
+        <p class="main-paragraph">И уже из этого мы можем:</p>
+        <p class="child-par">Что вводилось в поле ввода</p>
+        <p class="child-par">была ли нажата кнопка</p>
+        <p class="child-par">и тд в этом же роде</p>
+        <p class="main-paragraph">К примеру, мы можем изменить css свойство с помощью:</p>
+        <div class="code">
+            <code>
+                <span>a.<span class="pink">style.</span><span class="purple">background <span class="grey">// любое css свойство</span></span> = <span class="grey">Цвет фона</span></span>
+            </code>
+        </div>
+        <p class="main-paragraph">Кроме селеткоров мы можем использовать теги</p>
+        <div class="code">
+            <code>
+                <span class="func">let</span>
+                <span>a</span>
+                <span class="pink">=</span>
+                <span class="pink">document.</span>
+                <span class="func">getElementsByTagName( <span class="text">'h2'</span> )</span>
+            </code>
+        </div>
+        <h2 class="main-txt">Задачки</h2>
+        <hr>
+        <p class="child-par">Выведете значение поля 'input' в alert</p>
+        <p class="child-par">Выведете значение поля 'input' в alert, а потом поменяйте его любое css свойство</p>
+    </div>
+    <div class="doc">
+        <h1 class="main-txt">Интервалы</h1>
+        <hr>
+        <p class="main-paragraph">Мы можем вызвать функцию не в данный момент, а позже, через заданный интервал времени.</p>
+        <p class="main-paragraph">Я вам расскажу что такое setTimeout и setInterval и для чего они нужны</p>
+        <div class="code">
+            <code>
+                <span class="func">let</span>
+                <span>time</span>
+                <span class="pink">=</span>
+                <span class="func">setTimeout(func or code, [delay], [arg1], [arg2], <span class="text">...</span>)</span> 
+            </code>
+        </div>
+        <h3 class="main-txt">Параметры:</h3>
+        <p class="main-paragraph border">Func or code</p>
+        <p class="child-par">Функция либо строка кода для выполнения. Обычно используют функцию.</p> 
+        <p class="main-paragraph border">delay</p>   
+        <p class="child-par">Это интервал в миллисекнудах (1000мл == 1с) По умолчанию стоит 0</p>    
+        <p class="main-paragraph border">arg1, arg2 …</p>
+        <p class="child-par">Это аркгументы которые подаваются в функцию</p>
+        <p class="main-paragraph">Вот пример кода</p>
+        <div class="code">
+            <code>
+               <span class="func">function</span> <span>myfunc</span> (hello, name) {
+               <div><span class="func">alert</span> ( hello  <span class="pink">+</span> <span class="text">' , '</span> + name ); </div>
+                <div>}</div> 
+                  
+                 <div>
+                    <span class="func">setTimeout</span>( <span class="func">myfunc</span> , 1000, <span class="text"> "Привет"</span>, <span class="text"> "Никита Бишаров"</span>); // Привет, Никита Бишаров
+                </div> 
+            </code>
+        </div>
+        <h2 class="main-txt">Отмена с помощью claerTimeout</h2>
+        <hr>
+        <div class="code">
+            <code>
+                <span class="func">let</span>
+                <span>time</span>
+                <span class="pink">=</span>
+                <span class="func">setTimeout(<span class="text">...</span>)</span> 
+                <div> <span class="func">clearTimeout</span>
+                   <span>(time);</span> 
+                </div>
+            </code>
+        </div>
+        <h2 class="main-txt">setInterval</h2>
+        <p class="main-paragraph">Все тоже самое только отличие этого метода от setTimeout в том, что функция запускается не один раз, а через указанный интервал времени.</p>
+        <h2 class="main-txt">Задачки</h2>
+        <hr>
+        <p class="main-paragraph">Написать функцию, которая будет выводить "Привет" кыждые 5 секунд а когда она будет выполнена 5 раз, тогда  функция прервается и выводит "Досвидания"</p>
+    </div>
+    </div>
+    <div class="main-doc">
+        <div class="doc">
+            <h1 class="main-txt">Продвинутые знания</h1>
+            <hr>
+            <h1 class="main-txt">Объектно-ориентированное программирование ( ООП )</h1>
+            <hr>
+            <h1 class="main-txt">Обьекты</h1>
+            <hr>
+            <p class="main-paragraph">Обьекты это часть основы языка, и я должен вам объснить для чего они нужны, прежде чем идти дальше</p>
+            <p class="main-paragraph">Объекты служат для хранения и обработки различных типов данных</p>
+            <p class="main-paragraph">К примеру, В  языку C#, все что там есть - это обьекты, всё что в нем есть - наследует класс objeсt, поскольку C# как и JavaScript - объектно-оринтированный язык( ООП )</p>
+            <p class="main-paragraph">Другими словами, обьект - это контейнер для данных</p>
+            <p class="main-paragraph"><ins>Обьекты можно создать 2 способами:</ins></p>
+            <div class="code">
+                <code>
+                  <span class="func">let</span>  <span>myobj</span> <span class="pink">=</span> <span class="func">new</span> <span class="pink">Object</span>(); <span class="grey">// "конструктор объекта"</span> 
+                 <div> <span class="func">let</span>  <span>myobj</span> <span class="pink">=</span>  {}; <span class="grey">//  "литерал объекта"</span> </div>
+                </code>
+            </div>
+            <p class="main-paragraph">При использовании литерального синтаксиса сразу можем поместить в объект несколько свойств в виде «ключ: значение»:</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span> myobj <span class="pink">=</span> { 
+                        <div> time: <span class="text">"60"</span> ,  <span class="grey">// в ключе "time" хранится значение "60"</span> </div>
+                        <div> age: 15<span class="grey"> // в ключе "age" хранится значение 15</span></div>  
+                     <div>};</div>
+                </code>
+            </div>
+                 <p class="main-paragraph">Для обращения к элементу обьекта, нужно указать имя обьекта, потом точку, а потом имя элемнта</p>
+                 <p class="main-paragraph"><ins>вот пример вывод на консоль:</ins></p>
+                 <div class="code">
+                    <code>
+                        <span class="func">console.log</span>
+                        <span>( <span class="pink">myobj.</span><span class="purple">time</span> )</span>
+                        <div> <span class="grey"> // вывод: 60</span> </div>
+                    </code>
+                 </div>
+                <p class="main-paragraph">Значение ключей может быть любым</p>
+                <p class="main-paragraph"><ins>Для удаления свойств мы можем использовать ключевое слово <span class="pink">delete</span></ins></p>
+                <div class="code">
+                    <code>
+                        <span class="pink">delete</span>
+                        <span class="func">myobj.time</span>
+                    </code>
+                </div>
+                <p class="main-paragraph">Имя свойства может состоять из нескольких слов, но тогда оно должно быть заключено в кавычки:</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span> myobj <span class="pink">=</span> { 
+                        <div> time: <span class="text">"60"</span> , </div>
+                        <div> age: 15,</div>  
+                         <div> "booleann type": <span class="pink">true</span></div>
+                        
+                     <div>};</div>
+                </code>
+            </div>
+            <h2 class="main-txt">Добавление элемента:</h2>
+            <hr>
+            <p class="main-paragraph">Чтобы добавить элемент в обьект вам нужно указать обьект потом имя и значение:</p>
+            <div class="code">
+                <code>
+                    <span class="pink">myobj.name</span>
+                    <span class="purple">=</span>
+                    <span class="text">"nikita"</span>
+                </code>
+            </div>
+            <h3 class="main-txt">Важно</h3>
+            <hr>
+            <p class="main-paragraph">!! Объект, объявленный как константа, может быть изменён</p>
+            <p class="main-paragraph">Для ключей, имена которых состоят из нескольких слов, доступ через точку не работает, нужно использовать квадратные скобки</p>
+            <div class="code">
+                <code>
+                 <span class="func">alert</span> ( <span class="func">myobj</span>["booleann type"]</span>);
+                </code>
+            </div>
+            <p class="main-paragraph">Если в обьекте ключ вы укажите в квадратных скокбах, то это будет означать, что значение будет взято из переменной</p>
+            <div class="code">
+                <code>
+                    <span class="func">let</span>
+                    <span> age</span> <span class="purple">=</span> <span class="func">prompt( <span class="text">"Сколько вам лет"</span> )</span>
+                   <div> <span class="func">let</span> myobj <span class="pink">=</span> {</div> 
+                        <div> [age]: <span class="pink">15</span>,</div> 
+                        <div> <span class="grey">Будет использоваться перменная age</span> </div> 
+                     <div>};</div>
+                     <div>
+                        <span class="func">console.log</span>
+                        <span>( <span class="pink">myobj.age</span>)</span>
+                        <div> <span class="grey">// Вывод: 15</span> </div>
+                     </div>
+                </code>
+            </div>
+            <p class="main-paragraph">Для названия ключей мы можем брать зарезервированные слова по типу <span class="pink">for, let, if</span></p>
+            <h2 class="main-txt">Ключевое слово <span class="pink">in</span></h2>
+        <hr>
+        <p class="main-paragraph">Ключевое слово <span class="pink">in</span> исползуется для проверки, есть ли данное свойство в объекте</p>
+        <div class="code">
+            <code>
+               <span class="func">alert</span> <span>( <span class="text">"age"</span> <span class="pink">in</span> <span class="func">myobj</span> );</span>
+                <div> <span class="grey">//Вывод: true , Потому что в обьекте есть это свойство</span></div>
+            </code>
+        </div>
+        <h2 class="main-txt">Задачки</h2>
+        <hr>
+        <p class="child-par">1.создайте пустой обьект name</p>
+        <p class="child-par">2. добавьте свойство name со значением 'stas'</p>
+        <p class="child-par">3. измените name на 'никита'</p>
+        <p class="child-par">4. добавьте свойтво lastname со значением 'bisharov'</p>
+        <p class="child-par">5. проверьте обьект на наличие свойства name и если оно есть, тогда удалите его</p>
+        <p class="child-par">6. выведите обьект на консоль</p>
+        <p class="main-paragraph"><ins>Сумма зарплат</ins></p>
+        <p class="child-par">у нас есть обькт где храится зарплаты работников</p>
+        <div class="code">
+            <code>
+               <span class="func">let</span> costs = {
+                   <div>maxim: 80,</div> 
+                   <div> stas: 160,</div> 
+                   <div> nikita: 140</div> 
+                  }
+            </code>
+        </div>
+        <p class="main-paragraph">Напишите программу для подсчета суммы всех зарплат и сохраните значение в переменную <span class="pink">summa</span>, ну после выведите ее на через <span class="func">alert();</span></p>
+        </div>
+        <div class="doc">
+            <h1 class="main-txt">Классы</h1>
+            <hr>
+            <p class="main-paragraph">В объектно-ориентированном программировании класс – это расширяемый шаблон кода для создания объектов, который устанавливает в них начальные значения (свойства) и реализацию поведения (методы)</p>
+            <p class="main-paragraph">Иными словами, класс служит средством для введения абстрактных типов данных в программный проект.
+            <p class="main-paragraph">Суть отличия классов состоит в том, что при задании типа данных класс определяет одновременно как интерфейс, так и реализацию для всех своих экземпляров (объектов), поэтому вызов метода-конструктора обязателен.</p>
+            <p class="main-paragraph">В JavaScript класс – это разновидность функции.</p>
+            <h2 class="main-txt">Классы имеют следующий синтаксис:</h2>
+            <hr>
+            <div class="code">
+                <code>
+                    <span class="blue">class</span> <span class="pink">MyClass</span>{
+                       <div>
+                          <span class="text">
+                              // методы класса
+                        </span>    
+                    </div>
+                        <div>
+                            constructor() { ... }
+                        </div>
+                        <div><span class="blue">method1</span>() { ... }</div>
+                        <div><span class="blue">method2</span>() { ... }</div>
+                        <div>
+                            <span class="text">...</span>
+                        </div>
+                      }
+                </code>
+            </div>
+            <p class="main-paragraph">Классы используются там, где требуется создание нескольких объектов с одинаковыми свойствами и методами. Они позволяют создавать экземпляры объектов, которые имеют свои уникальные значения свойств, но при этом наследуют общие методы и свойства от класса.</p>
+            <p class="main-paragraph">Например, представьте, что вы создаете игру с несколькими игроками. У каждого игрока есть имя, уровень здоровья, атаки и защиты. Вместо создания отдельной переменной для каждого игрока, вы можете определить класс "Игрок" с соответствующими свойствами и методами:</p>
+            <div class="code">
+                <code>
+                   <span class="blue">class</span> <span class="pink">Character</span> {
+                        <div> 
+                            <span class="func">constructor</span>(name, hp) { 
+                        </div> 
+                            <div>
+                                <span class="pink">this.name</span> <span class="pink">=</span> <span class="blue">name</span>;
+                            </div> 
+                            <div>
+                                <span class="pink">this.hp</span> <span class="pink">=</span> <span class="blue">hp</span>;
+                            </div>
+                        <div>}</div> 
+
+                        <div>
+                            <span class="func">attack</span>(enemy) {
+                        </div> 
+                            <div>
+                            <span class="text">
+                                // реализация метода атаки
+                            </span> 
+                            </div> 
+                        <div>}</div> 
+                      
+                    <div>
+                        <span class="text">
+                            Теперь вы можете создавать экземпляры объектов-игроков на основе этого класса:
+                        </span>
+                    </div>  
+                     <span class="func">let</span> hero1 <span class="pink">=</span> <span class="func">new</span> <span class="pink">Character</span>(<span class="text">"dante"</span>, 100);
+                      <div><span class="func">let</span> hero2 <span class="pink">=</span> <span class="func">new</span> <span class="pink">Character</span>(<span class="text">"virgil"</span>, 150);</div>
+                      <div><span>hero1.attack();</span></div>
+                      <div><span>hero2.attack();</span></div>
+                </code>
+            </div>
+            <p class="main-paragraph">В этом примере мы создали класс и сделали экземпляры класса двум переменным, если было бы еще больше параметров и переменных то вы бы замучились писать и классы здесь будут необходимыми</p>
+            <p class="main-paragraph">слово <span class="func">constructor</span> - используется для создания и инициализации метода либо обьекта класса. Без него не получится объявить их.</p>
+            <p class="main-paragraph">Мы также можем использовать функции внутри нашего класса, но с одной особенностью, слово <span class="func">function</span> использовать не нужно</p>
+            <p class="main-paragraph">Предыдущий пример использует функцию <span class="func">attack</span> и вызывается</p>
+            <div class="imp">
+                <h3 class="imp-txt">Важно!</h3>
+                 <p class="child-par">Имя класса должно начинаться с большой буквы</p>
+                 <p class="child-par">Конструктор и инициализация: При использовании классов важно понимать, как работает конструктор и как происходит инициализация объектов при создании экземпляров класса.</p>
+                 <p class="child-par">Наследование: JavaScript использует прототипное наследование, и классы введены в ES6 как синтаксический сахар для работы с прототипами. Важно понимать, как работает наследование в JavaScript и как использовать его в классах</p>
+                 <p class="child-par"> Не все браузеры поддерживают все возможности ES6 (ECMAScript 2015) и более новых версий JavaScript, поэтому важно проверять, поддерживают ли целевые пользователи вашего веб-приложения используемый синтаксис</p>
+            </div>
+            <h2 class="main-txt">Наследование Классов</h2>
+            <hr>
+            <p class="main-paragraph">Наследование классов в JavaScript означает, что один класс может наследовать свойства и методы другого класса. Это означает, что дочерний класс получает все свойства и методы родительского класса, но также может иметь собственные уникальные свойства и методы.</p>
+            <p class="main-paragraph">Представьте, что у вас есть класс "Фрукт", который имеет свойства "цвет" и "вкус", и методы "съедобен" и "произрастает на деревьях". Теперь вы создаете новый класс "Яблоко", который наследует свойства и методы класса "Фрукт". Но у класса "Яблоко" есть также свойства и методы, связанные исключительно с яблоками, такие как "текстура кожуры" или "содержание витамина C".</p>
+            <p class="main-paragraph">Таким образом, класс "Яблоко" наследует основные свойства и методы от класса "Фрукт" и имеет свои собственные уникальные свойства и методы.</p>
+            <p class="main-paragraph">Вот вам пример:</p>
+            <div class="code">
+                <code>
+                   <span class="blue">class</span> Fruit{
+                        <div>
+                          <span class="blue">constructor</span>(color,taste){
+                        </div>  
+                           <div>
+                               <span class="pink">this.color</span> <span class="purple">=</span> color;
+                           </div> 
+                           <div>
+                            <span class="pink">this.taste</span> <span class="purple">=</span> taste;
+                           </div> 
+                       <div>}</div> 
+                       <div>
+                          <span class="func">edible</span>(){
+                       </div> 
+                          <div>
+                             <span class="pink">return</span> <span class="text">"yes"</span>;
+                          </div> 
+                       <div>}</div> 
+                       <div>
+                        <span class="func">InTree</span>(){
+                     </div> 
+                        <div>
+                           <span class="pink">return</span> <span class="text">"yes"</span>;
+                        </div> 
+                     <div>}</div>
+                   <div>}</div>  
+                   <div>
+                     <span class="func">class</span> Apple <span class="pink">extends</span> <span class="func">Fruit</span>{
+                    </div>   
+                    <div>
+                        <span class="blue">constructor</span>(color,taste,texture){
+                    </div> 
+                    <div>
+                        <span class="pink">super</span>
+                        <span>(color, taste)</span>
+                    </div> 
+                        <div>   
+                            <span class="pink">this.texture</span> <span class="purple">=</span> texture;
+                        </div>
+                       <div>}</div> 
+                   <div>}</div> 
+                   <div>
+                    <span class="func">const</span>
+                    <span>myApple</span>
+                    <span class="purple">=</span>
+                    <span class="blue">new</span>
+                    <span class="func">Apple</span>
+                    <span class="text">("red","sweet","good")</span>
+                   </div>
+                   <div>
+                    <span class="func">console.log</span>     
+                    <span>(myApple.color);</span>  
+                   </div>
+                   <div>
+                    <span class="func">console.log(myApple.edible());</span>       
+                   </div>
+                   <div>
+                    <span class="text">Вывод: red, yes</span>
+                   </div>
+                </code>
+            </div>
+                <h2 class="main-txt">Get & set</h2>
+                <hr>
+                <p class="main-paragraph">Get и set (гетер и сеттер) предоставляют специальный метод доступа к свойству, что позволяет контролировать процесс получения и установки значений свойств. Таким образом, использование геттеров и сеттеров позволяет обеспечить более гибкий и контролируемый доступ к свойствам класса.</p>
+                <p class="main-paragraph">Пример и синтаксис:</p>
+                <div class="code">
+                    <code>
+                       <span class="func">class</span> NewClass{
+                        <div>
+                            <span class="blue">constructor</span>(){
+                        </div> 
+                             <div>
+                               <span class="pink">this.value</span> <span class="purple">=</span> 0;
+                             </div> 
+                        <div>}</div>   
+                       <div>
+                           <span class="blue">get</span> Val(){
+                       </div>   
+                            <div>
+                                <span class="pink">return this.value</span>;
+                            </div>    
+                        <div>}</div>  
+                        <div>
+                            <span class="blue">set</span> Val(newValue){
+                        </div>   
+                             <div>
+                                 <span class="pink">return this.value = newValue</span>;
+                             </div>    
+                         <div>}</div>  
+                            
+                      <div>}</div>
+                     <div>
+                         <span class="func">const</span> zxc <span class="purple">=</span> <span class="func">new</span> <span class="blue">NewClass</span>;
+                     </div>  
+                      <div>
+                          <span class="func">console.log</span> (zxc.value);
+                          <div>
+                            <span class="text">// 0 </span>
+                          </div>
+                      </div> 
+                      <div><span class="text">//обращаемся к сеттеру</span></div>
+                       <div>
+                           zxc.value  <span class="purple">=</span> 10;
+                       </div> 
+                       <div>
+                        <span class="func">console.log</span> (zxc.value);
+                        </div> 
+                        <div><span class="text">// 10</span></div>
+                    </code>
+                </div>
+                <p class="main-paragraph">Тоесть другими словами это заполнениe свойств класса</p>
+                <h2 class="main-txt">Задачки</h2>
+                <hr>
+                <p class="child-par">1. Создайте класс "Человек", который имеет свойства "имя" и "возраст". Добавьте метод "приветствие", который выводит в консоль приветствие с именем и возрастом человека. Создайте объекты с разными именами и возрастами, и вызовите метод "приветствие" для каждого объекта.</p>
+                <p class="child-par">2. У вас есть класс "Животное" (Animal), у которого есть свойства "имя" (name) и метод "голос" (sound), выводящий сообщение "[Имя животного] издает звук.". Напишите дочерний класс "Собака" (Dog), который наследует класс "Животное" и имеет свой собственный метод "голос", который выводит сообщение "[Имя собаки] лает.".
+
+                    Затем создайте экземпляр класса "Собака" с именем "Барон" и вызовите его метод "голос".</p>
+        <h1 class="main-txt">Инкапсуляция</h1>
+        <hr>
+        <p class="main-paragraph">Вот представьте что у вас стоит на кухне обычный электричесский чайник, вы просто наживаете на кнопку и он работает, и с виду он простой</p>
+        <p class="main-paragraph">А внутри все иначе, он состоит из кучи элементов и электричесских деталей. Но вас просто как обычного пользователя это не волнует.</p>
+        <p class="main-paragraph">Создатель прячет это от вас в корпусе чайника что бы вы ничего не поломали! Вот так же делают программисты в своих программах</p>
+        <p class="main-paragraph">Так вот, Суть инкапсуляции в том, что бы скрывать все, что не нужно вашему пользователю. В противном случае это может даже привести к поломке программы.</p>
+        <p class="main-paragraph">Существует Внешний и внутренний интерфейс</p>
+        <p class="child-par">Внутренний (приватный) - это то что находится внитри чего то (в функции, классе, обьекте и тд)</p>
+        <p class="child-par">Внешний (публичый) - это то что находится в глобальной области видимости. Тоесть за этими функциями и тд</p>
+        <p class="main-paragraph">И важно будет "прятать" внутренний интерфейс от внешнего , потому что это может привести и большим проблеммам</p>
+        <p class="main-paragraph">По сути она нужна для того, что бы вашим классом пользовались только так , как было задумано</p>
+        <p class="main-paragraph">Можно это сделать через замыкание а можно и через модификаторы доступа</p>
+        <h2 class="main-txt">Четыре типа доступа к свойствам класса</h2>
+        <p class="child-par">public</p>
+        <p class="child-par">private</p>
+        <p class="child-par">protected</p>
+        <p class="child-par">readonly</p>
+        <h2 class="main-txt">Public</h2>
+        <hr>
+        <p class="main-paragraph">Это дефолтное значение, означает что обьект будет доступен на уровне экземпляра класса</p>
+        <h2 class="main-txt">Private</h2>
+        <hr>
+        <p class="main-paragraph">Oзначает что обьект НЕ будет доступен на уровне экземпляра класса</p>
+        <h2 class="main-txt">Protected</h2>
+        <hr>
+        <p class="main-paragraph">Модификатор protected действует аналогично private, за исключением того, что члены, объявленные protected, могут быть доступны в подклассах.</p>
+        <h2 class="main-txt">Readonly</h2>
+        <hr>
+        <p class="main-paragraph">Мы можем делать свойства, доступными только для чтения, с помощью ключевого слова readonly. Такие свойства должны быть инициализированы при их объявлении или в конструкторе.</p>
+       <h1 class="main-txt">Абстракция</h1>
+       <hr>
+       <p class="main-paragraph">Абстракция – это принцип, который гласит, что класс должен представлять лишь такую информацию, которая соответствует контексту задачи. Проще говоря, мы представляем вовне лишь те свойства и методы, которые собираемся использовать. Если же что-то не нужно, то оно не раскрывается</p>
+       <p class="main-paragraph">Этот принцип тесно связан с инкапсуляцией, поскольку мы можем использовать публичные и закрытые свойства/методы, определяя, что раскрывать, а что нет.</p>
+        <h1 class="main-paragraph">Полиморфизм</h1>
+        <hr>
+            <p class="main-paragraph">Само слово означает «много форм».</p>
+            <p class="main-paragraph">Существует много толкований сути явления, но основная его идея в ООП заключается в способности вызывать один и тот же метод для разных объектов, и при этом каждый объект будет реагировать по-своему.</p>
+            <p class="main-paragraph">Полиморфизм в контексте ООП означает, что разные объекты могут реагировать на один и тот же запрос, проявляя разное поведение в зависимости от своего типа. Это позволяет сократить дублирование кода, улучшить читаемость и облегчить расширение программы.</p>
+            <p class="main-paragraph">Вот пример Полиморфизма и вы все поймете</p>
+
+            <div class="code">
+                <code>
+                    <span> 
+                   <span class="blue">class</span> Car{
+                     <div>
+                        <span class="blue">constructor</span>(mark, speed){     
+                    </div> 
+                         <div>
+                             <span class="pink">this.mark</span> = mark;
+                         </div> 
+                         <div>
+                             <span class="pink">this.speed</span> = speed;
+                         </div> 
+                       <div>}</div>
+                       <div>
+                         <span class="func">beep</span>(){
+                       </div> 
+                       <div>
+                          <span class="func">console.log</span> (<span class="text">"beep beep"</span>);
+                       </div>  
+                      <div>}</div>  
+                    <div>}</div>
+                    <span class="blue">class</span> Moto <span class="pink">extends</span> Car {
+                        <div>
+                           <span class="blue">constructor</span>(mark, speed){     
+                       </div> 
+                       <div>
+                          <span class="pink">super</span>(mark, speed);
+                       </div>
+                          <div>}</div>
+                          <div>
+                            <span class="func">beep</span>(){
+                          </div> 
+                          <div>
+                             <span class="func">console.log</span> (<span class="text">"vroom vroom"</span>);
+                          </div>  
+                         <div>}</div> 
+                      <div>
+                        <span class="func">const</span> toyota <span class="purple">=</span><span class="pink">new</span><span class="func">Car</span>(<span class="text">"toyota"</span> , 90);
+                      </div>
+                      <div>
+                        <span class="func">const</span> kawasaky <span class="purple">=</span><span class="pink">new</span> <span class="func">Moto</span>(<span class="text">"toyota"</span> , 90);
+                      </div>
+                      <div>
+                         <span class="func">toyota.beep</span> ();
+                      </div>
+                      <div>
+                        <span class="func">kawasaky.beep</span>  ();
+                      </div>
+                      <div>
+                        <span class="tetx">Вывод:</span>
+                        <div><span class="text">beep beep</span></div>
+                        <div><span class="text">vroom vroom</span></div>
+                      </div>
+                    </span>
+                </code>
+            </div>
+            <span class="main-paragraph"> Это позволяет сократить дублирование кода, улучшить читаемость и облегчить расширение программы</span>
+            <span class="main-paragraph">Полиморфизм выполняется с помощью наследованию</span>
+            <h1 class="main-txt">Подведем итоги</h1>
+            <p class="child-par">ООП имеет 4 фундаментальных концепций: наследование, полиморфизм, инкапсуляция и абстракция</p>
+            <p class="child-par">Основной единицей ООП является объект, на нем все строится. </p>
+            <p class="child-par">Объектно-ориентированное программирование подходит для решения множества задач.</p>
+            <h2 class="main-txt">Задачки</h2>
+            <hr>
+            <p class="main-paragraph">Реализовать класс Animal, который будет представлять собой базовую модель животного. Класс должен содержать следующие методы:</p>
+                <p class="child-par">getAnimalType() — статический метод, возвращающий тип животного;</p>
+                <p class="child-par">speak() — метод, позволяющий животному издавать звуки;</p>
+                <p class="child-par">sleep() — абстрактный метод, который должен быть реализован в дочерних классах.</p>
+                <p class="child-par">Класс Animal должен наследоваться от другого класса. Также класс должен поддерживать инкапсуляцию и полиморфизм.</p>
+                
+                
+                
+                
+    </div>
+   
+</body>
+</html>
